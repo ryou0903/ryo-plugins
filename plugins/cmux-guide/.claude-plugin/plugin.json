@@ -1,0 +1,9 @@
+{
+  "name": "cmux-guide",
+  "version": "0.1.0",
+  "description": "cmux terminal multiplexer guide — skills and agents for learning, configuring, and automating cmux.",
+  "author": { "name": "ryou0903" },
+  "repository": "https://github.com/ryou0903/cmux-guide",
+  "license": "MIT",
+  "keywords": ["cmux", "terminal", "workspace", "guide", "reference", "automation"]
+}
