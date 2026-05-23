@@ -41,7 +41,7 @@ description: |
   Launching Ulanzi Studio with debug flags is a deployment/debug task handled by d200x-deployer.
   </commentary>
   </example>
-model: inherit
+model: sonnet
 color: yellow
 tools: ["Read", "Bash"]
 ---

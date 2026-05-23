@@ -52,7 +52,7 @@ description: |
   </commentary>
   assistant: "I'll use the d200x-docs agent to look up the macOS log paths."
   </example>
-model: inherit
+model: haiku
 color: cyan
 tools: ["Read", "Bash"]
 ---

@@ -42,7 +42,7 @@ description: |
   </commentary>
   assistant: "I'll use the d200x-builder agent to generate the SVG-based dynamic icon rendering code for the Node.js plugin."
   </example>
-model: inherit
+model: sonnet
 color: green
 tools: ["Read", "Write", "Bash"]
 ---
