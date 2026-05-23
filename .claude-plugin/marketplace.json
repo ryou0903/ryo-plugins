@@ -29,6 +29,12 @@
       "category": "development"
     },
     {
+      "name": "qmd-knowledge",
+      "description": "Local hybrid search over knowledge base using QMD with balanced lex+vec strategy and LLM reranking.",
+      "source": "./plugins/qmd-knowledge",
+      "category": "productivity"
+    },
+    {
       "name": "env-registry",
       "description": "Environment database capturing tools, services, commands, URLs, MCP servers, plugins, and skills across all devices.",
       "source": "./plugins/env-registry",

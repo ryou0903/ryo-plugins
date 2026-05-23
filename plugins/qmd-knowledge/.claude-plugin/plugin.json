@@ -1,0 +1,9 @@
+{
+  "name": "qmd-knowledge",
+  "version": "0.1.0",
+  "description": "QMDによるローカルハイブリッド検索でナレッジベースを高速検索するプラグイン",
+  "author": {
+    "name": "りょうくん & エリス"
+  },
+  "keywords": ["qmd", "knowledge", "search", "vector", "hybrid"]
+}

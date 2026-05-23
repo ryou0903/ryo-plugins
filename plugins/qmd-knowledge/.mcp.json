@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "qmd-knowledge": {
+      "command": "/Users/ryo/.local/nodejs/bin/node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/knowledge_mcp_server.cjs"
+      ]
+    }
+  }
+}
