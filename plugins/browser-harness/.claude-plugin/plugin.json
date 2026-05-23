@@ -1,0 +1,10 @@
+{
+  "name": "browser-harness",
+  "version": "0.1.0",
+  "description": "Direct browser control via CDP using browser-harness CLI. Connects to the user's already-running Chrome for automation, scraping, testing, and web interaction.",
+  "author": {
+    "name": "browser-use"
+  },
+  "repository": "https://github.com/browser-use/browser-harness",
+  "license": "MIT"
+}
