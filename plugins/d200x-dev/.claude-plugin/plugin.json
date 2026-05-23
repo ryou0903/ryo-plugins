@@ -1,0 +1,11 @@
+{
+  "name": "d200x-dev",
+  "version": "0.1.0",
+  "description": "Ulanzi D200X Stream Controller プラグイン開発用エージェント群。SDK仕様参照、プラグインスキャフォールド/コード生成、デプロイ/デバッグ支援を提供。",
+  "author": {
+    "name": "ryou0903",
+    "email": "another.me0903@gmail.com"
+  },
+  "repository": "https://github.com/ryou0903/ryo-plugins",
+  "license": "MIT"
+}
