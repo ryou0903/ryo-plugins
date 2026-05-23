@@ -1,0 +1,9 @@
+{
+  "name": "cmux-resurrect",
+  "version": "0.1.0",
+  "description": "Save and restore cmux workspaces and CLI agent sessions after Mac reboot.",
+  "author": { "name": "ryou0903" },
+  "repository": "https://github.com/ryou0903/cmux-resurrect",
+  "license": "MIT",
+  "keywords": ["cmux", "workspace", "restore", "session"]
+}

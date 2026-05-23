@@ -1,0 +1,17 @@
+{
+  "description": "Detect forked sessions at resume time and inject a system reminder so the resumed Claude knows it's a fork, not the original session.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/check-fork.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

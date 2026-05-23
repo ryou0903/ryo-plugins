@@ -1,0 +1,11 @@
+{
+  "name": "super-fork",
+  "version": "0.1.0",
+  "description": "Fork Claude Code sessions with more power than the built-in desktop fork. Works with remote-control sessions, supports specific session UUIDs, and leaves room for future lineage-extraction and cwd-relocation modes.",
+  "author": {
+    "name": "ryou0903"
+  },
+  "repository": "https://github.com/ryou0903/super-fork",
+  "license": "MIT",
+  "keywords": ["claude-code", "session", "fork", "productivity"]
+}

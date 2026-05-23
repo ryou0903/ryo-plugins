@@ -1,0 +1,6 @@
+{
+  "super-fork": {
+    "command": "node",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/fork_mcp.cjs"]
+  }
+}
