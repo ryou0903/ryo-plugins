@@ -1,0 +1,10 @@
+{
+  "name": "env-registry",
+  "version": "0.2.0",
+  "description": "Ryo's environment database. Captures and organizes tools, services, commands, URLs, MCP servers, plugins, and skills across all devices (Mac, Windows, Galaxy).",
+  "author": {
+    "name": "ryou0903"
+  },
+  "license": "MIT",
+  "keywords": ["environment", "registry", "commands", "tools", "reference", "skills"]
+}
