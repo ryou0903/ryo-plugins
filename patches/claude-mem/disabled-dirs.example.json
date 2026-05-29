@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy to ~/.claude-mem/disabled-dirs.json. List absolute directory paths. Each dir AND its subdirectories are excluded from claude-mem context injection and logging. Keep the REAL file local only — do not commit real paths to this public repo.",
+  "disabled": [
+    "/Users/you/path/to/private-project"
+  ]
+}
