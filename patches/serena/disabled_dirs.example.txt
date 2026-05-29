@@ -1,0 +1,10 @@
+# serena-hooks-gated: directories where Serena's hooks are disabled.
+# One absolute path per line. A path also disables everything under it.
+# `#` comments and blank lines are ignored. Trailing slashes tolerated.
+# Read on every hook invocation — edits take effect immediately.
+#
+# The REAL list lives at ~/.serena/disabled_dirs.txt (local only; never commit
+# real paths to this public repo). This .example is just the template.
+
+/absolute/path/to/some/project
+/Users/you/scratch

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# serena-hooks-gated — per-directory gate in front of `serena-hooks`.
+#
+# Why: serena's hooks (activate / remind / auto-approve / cleanup) have NO
+# built-in per-directory disable. This wrapper reads the hook's stdin, checks
+# the session cwd against a disabled-dirs list, and if it matches (the dir
+# itself or any subdir) it swallows the input and exits silently — so no
+# SessionStart context injection, no nudges, no auto-approve. Otherwise it
+# forwards stdin verbatim to the real serena-hooks.
+#
+# Disabled dirs: one absolute path per line in the file below.
+#   - blank lines and `# comments` are ignored
+#   - a path disables that dir AND everything under it
+#   - trailing slashes are tolerated
+#
+# Reversible: just point settings.json back at `serena-hooks` and this file
+# becomes dead. serena itself is never patched, so updates can't break it.
+
+REAL_HOOKS="${SERENA_HOOKS_BIN:-$HOME/.local/bin/serena-hooks}"
+DISABLED_FILE="${SERENA_DISABLED_DIRS_FILE:-$HOME/.serena/disabled_dirs.txt}"
+
+INPUT="$(cat)"
+
+# Resolve the session cwd: prefer the hook payload's .cwd, fall back to $PWD.
+CWD="$(printf '%s' "$INPUT" | jq -r '.cwd // empty' 2>/dev/null)"
+[ -z "$CWD" ] && CWD="$PWD"
+CWD="${CWD%/}"
+
+if [ -f "$DISABLED_FILE" ]; then
+  while IFS= read -r dir || [ -n "$dir" ]; do
+    dir="${dir%%#*}"                                   # strip inline comment
+    dir="${dir#"${dir%%[![:space:]]*}"}"               # ltrim
+    dir="${dir%"${dir##*[![:space:]]}"}"               # rtrim
+    dir="${dir%/}"                                     # drop trailing slash
+    [ -z "$dir" ] && continue
+    case "$CWD" in
+      "$dir"|"$dir"/*) exit 0 ;;                        # match → serena off here
+    esac
+  done < "$DISABLED_FILE"
+fi
+
+printf '%s' "$INPUT" | "$REAL_HOOKS" "$@"
