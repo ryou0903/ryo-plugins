@@ -47,12 +47,6 @@
       "category": "productivity"
     },
     {
-      "name": "hermes-x",
-      "description": "Search X (Twitter) via Hermes x_search toolset (Grok-powered). No X API key needed.",
-      "source": "./plugins/hermes-x",
-      "category": "productivity"
-    },
-    {
       "name": "monorepo-install",
       "description": "Install a new plugin into the ryo-plugins monorepo. Handles all registration steps.",
       "source": "./plugins/monorepo-install",
@@ -60,7 +54,7 @@
     },
     {
       "name": "xq",
-      "description": "Search X (Twitter) via the xq CLI (direct xAI x_search, Grok-powered). Successor to hermes-x. No X API key needed.",
+      "description": "Search X (Twitter) via the xq CLI (direct xAI x_search, Grok-powered). No X API key needed.",
       "source": "./plugins/xq",
       "category": "productivity"
     }

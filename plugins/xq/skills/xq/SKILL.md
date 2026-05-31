@@ -1,13 +1,13 @@
 ---
 name: xq
-description: "xqコマンドでX(Twitter)を自然言語検索する（xAIのx_searchを直接叩くGrok製。hermes-x後継）。「Xで調べて」「Xで検索」「ツイート探して」「Xの反応」「Xでの評判」「Xのトレンド」「X search」「xq」のような指示で発動。"
+description: "ターミナルでxqを使用し、X(Twitter)内の情報をGrokに調べさせる。「Xで調べて」「Xの反応」「Xでの評判」「Xのトレンド」「xqで〜」「ツイート探して」のような指示で発動。またはXにしかなさそうな情報や生の最新情報が必要と判断したときに発動。"
 allowed-tools: Bash
 ---
 
 # xq
 
 Search X (Twitter) in natural language with the `xq` CLI, which calls xAI's
-Responses API `x_search` tool directly (Grok-powered). Successor to `hermes-x`.
+Responses API `x_search` tool directly (Grok-powered).
 Read-only: search and summarize, no posting/liking.
 
 ## Usage
@@ -42,8 +42,9 @@ xq mode list --json                      # discover available modes
 
 ## Auth & errors
 
-Credentials are resolved automatically from Hermes' `xai-oauth` (no X API key,
-no setup). On `401`/`403` the token is stale/expired — tell the user to re-auth:
+Credentials are resolved automatically from the `xai-oauth` token store (no X
+API key, no setup). On `401`/`403` the token is stale/expired — tell the user
+to re-auth:
 
 ```bash
 hermes auth add xai-oauth
