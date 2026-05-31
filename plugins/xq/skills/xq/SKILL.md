@@ -28,6 +28,26 @@ xq --json "latest @xai post, 1 item with URL"
 Default text output is a `回答:` summary plus a `引用:` list of source URLs.
 `--json` returns `{success, answer, citation_urls, mode, ...}`.
 
+## Chat (persistent context)
+
+For multi-turn research, use a named session so follow-ups keep prior context
+without re-explaining it. The conversation is stored xAI-side (30-day retention)
+and continued via `previous_response_id`, so each follow-up sends only the new
+question (token-cheap):
+
+```bash
+xq chat <name> "first question"     # one-liner; creates the session on first use
+xq chat <name> "follow-up that refers to 'それ' / 'that'"
+xq chat list                        # sessions
+xq chat show <name>                 # transcript
+xq chat rm <name>                   # delete / reset an expired session
+```
+
+`--json` adds `session`, `turn_index`, `response_id`. One session = one
+sequential conversation; for parallel work that must not mix context, use
+distinct session names. Use one-shot `xq "..."` (no session) when no memory is
+needed.
+
 ## Modes (optional system prompt)
 
 A mode injects a system prompt to steer the answer. Default off. Use the
