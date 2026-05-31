@@ -1,0 +1,10 @@
+{
+  "name": "monorepo-install",
+  "version": "0.1.0",
+  "description": "Install a new plugin into the ryo-plugins monorepo. Handles all registration steps: marketplace.json, installed_plugins.json, and cache.",
+  "author": {
+    "name": "ryou0903"
+  },
+  "license": "MIT",
+  "keywords": ["plugin", "install", "monorepo", "management"]
+}

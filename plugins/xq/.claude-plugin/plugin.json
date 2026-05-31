@@ -1,0 +1,10 @@
+{
+  "name": "xq",
+  "version": "0.1.0",
+  "description": "Search X (Twitter) via the xq CLI (direct xAI x_search, Grok-powered). Successor to hermes-x. No X API key needed.",
+  "author": {
+    "name": "ryou0903"
+  },
+  "license": "MIT",
+  "keywords": ["x", "twitter", "grok", "xai", "search", "xq"]
+}
